@@ -98,17 +98,21 @@
 
     <div class="row border-bottom no-gutters">
         <div class="col ">
+
+        <?php
+     $custom_logo_id = get_theme_mod( 'custom_logo' );
+     $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+        ?>
         
-        <span class="logo nav-primary d-none d-lg-block" style="">
-             <img class="img-fluid" src="<?php echo get_bloginfo('template_directory'); ?>/logo2.png" />
+        <span class="logo nav-primary d-none d-lg-block" >
+             <img class="img-fluid" src="<?php echo $image[0]; ?>" />
         </span>
-        <span class="logo2 nav-primary d-lg-none " style="">
-             <img class="img-fluid" src="<?php echo get_bloginfo('template_directory'); ?>/logo2.png" />
+        <span class="logo2 nav-primary d-lg-none " >
+             <img class="img-fluid" src="<?php echo $image[0]; ?>" />
         </span>
            
         <nav class="nav justify-content-end">
-
-       
 
             <a class="nav-link active" href="#">Students</a>
             <a class="nav-link" href="#">Teachers</a>
