@@ -29,10 +29,19 @@
             list-style:none;
             display:block;
             padding: 0.55rem;
-            
+            color:white;            
         }
+
+        /** Hover effects for submenu **/
         .menu-navigation-container>li:hover {
             background-color:white;
+            cursor:pointer;
+            text-decoration:none;
+            color:blue;
+        }
+
+        a {
+            color:inherit;
         }
 
 
@@ -54,6 +63,24 @@
             padding:100px;
         }
 
+        .logo {
+            position:absolute;
+            margin-left:80px;
+            width:135px;
+            height:127px;
+            z-index:100;
+            padding:5px;
+        }
+
+        .logo2 {
+            position:absolute;
+            margin-left:-20px;
+            width:41px;
+            border: 1px solid grey;
+            z-index:100;
+            padding:5px;
+        }
+
 
 
     </style>
@@ -61,14 +88,28 @@
   </head>
   <body>
 
- 
+ <div>
+
+</div>
    
   <div class="container-fluid">
 
-    <div class="row d-none d-lg-block">
+  
+
+    <div class="row border-bottom no-gutters">
         <div class="col ">
+        
+        <span class="logo nav-primary d-none d-lg-block" style="">
+             <img class="img-fluid" src="<?php echo get_bloginfo('template_directory'); ?>/logo2.png" />
+        </span>
+        <span class="logo2 nav-primary d-lg-none " style="">
+             <img class="img-fluid" src="<?php echo get_bloginfo('template_directory'); ?>/logo2.png" />
+        </span>
            
         <nav class="nav justify-content-end">
+
+       
+
             <a class="nav-link active" href="#">Students</a>
             <a class="nav-link" href="#">Teachers</a>
             <a class="nav-link" href="#">Link</a>
@@ -78,7 +119,7 @@
         </div>
     </div>
     <div class="row d-none d-lg-block">
-        <div class="col  nav-primary">
+        <div class="col nav-primary">
         
         <?php wp_nav_menu( 
             array( 
