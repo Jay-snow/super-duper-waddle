@@ -127,7 +127,7 @@
         
         <?php wp_nav_menu( 
             array( 
-                'theme_location' => 'header-menu',
+                'theme_location' => 'sub-menu',
                 'container' => 'nav',
                 'items_wrap' => '%3$s',
                 'container_class' => 'menu-navigation-container justify-content-center'
