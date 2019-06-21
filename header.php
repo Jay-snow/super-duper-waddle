@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
   <head>
 
 
   
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo( 'charset'); ?> ">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title><?php wp_title(); ?></title>
 
     <style>
         .nav-primary {
@@ -19,8 +19,23 @@
         }
 
         .justify-content-center>a.nav-link:hover {
+            
+        }
+
+        .menu-navigation-container {
+            display:flex;
+        }
+        .menu-navigation-container>li {
+            list-style:none;
+            display:block;
+            padding: 0.55rem;
+            
+        }
+        .menu-navigation-container>li:hover {
             background-color:white;
         }
+
+
         .hero {
             background-image:url( <?php echo get_bloginfo('template_directory'); ?>/hero2.jpg);
             height:800px;
@@ -35,7 +50,7 @@
             background-color: rgba(0,0,255,0.6);
             color:white;
             align-self:center;
-            margin-bottom:100px;
+            margin-bottom:150px;
             padding:100px;
         }
 
@@ -45,7 +60,9 @@
 
   </head>
   <body>
-    
+
+ 
+   
   <div class="container-fluid">
 
     <div class="row d-none d-lg-block">
@@ -62,15 +79,16 @@
     </div>
     <div class="row d-none d-lg-block">
         <div class="col  nav-primary">
-           
-        <nav class="nav justify-content-center">
-            <a class="nav-link active" href="#">About</a>
-            <a class="nav-link" href="#">Classes</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link" href="#">Locations</a>
-            <a class="nav-link" href="#">Giving</a>
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </nav>
+        
+        <?php wp_nav_menu( 
+            array( 
+                'theme_location' => 'header-menu',
+                'container' => 'nav',
+                'items_wrap' => '%3$s',
+                'container_class' => 'menu-navigation-container justify-content-center'
+                ) 
+            ); ?>
+
 
         </div>
     </div>
