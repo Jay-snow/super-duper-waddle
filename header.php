@@ -28,20 +28,24 @@
         .menu-navigation-container>li {
             list-style:none;
             display:block;
-            padding: 0.55rem;
-            color:white;            
+            padding: 0.55rem 1.75rem;
+            color:white;
+            font-size:1.15rem;            
         }
 
         /** Hover effects for submenu **/
         .menu-navigation-container>li:hover {
             background-color:white;
             cursor:pointer;
-            text-decoration:none;
+
             color:blue;
         }
 
         a {
             color:inherit;
+        }
+        a:hover {
+            text-decoration: none;
         }
 
 
@@ -60,7 +64,7 @@
             color:white;
             align-self:center;
             margin-bottom:150px;
-            padding:100px;
+            padding:50px 75px 50px 25px;
         }
 
         .logo {
