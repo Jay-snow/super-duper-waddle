@@ -18,14 +18,36 @@
             background-color: rgb(0, 57, 166);
         }
 
-        .justify-content-center>a.nav-link:hover {
-            
-        }
+        /** Main-menu stylings **/
 
-        .menu-navigation-container {
+        .header-menu-navigation-container {
             display:flex;
         }
-        .menu-navigation-container>li {
+
+        /**Sub menu stylings **/
+        .header-menu-navigation-container {
+            display:flex;
+        }
+        .header-menu-navigation-container>li {
+            list-style:none;
+            display:block;
+            padding: 0.55rem 1.75rem;
+            color:black;
+            font-size:1.15rem;            
+        }
+
+
+
+
+        .submenu-navigation-container {
+            display:flex;
+        }
+
+        /**Sub menu stylings **/
+        .submenu-navigation-container {
+            display:flex;
+        }
+        .submenu-navigation-container>li {
             list-style:none;
             display:block;
             padding: 0.55rem 1.75rem;
@@ -34,10 +56,9 @@
         }
 
         /** Hover effects for submenu **/
-        .menu-navigation-container>li:hover {
+        .submenu-navigation-container>li:hover {
             background-color:white;
             cursor:pointer;
-
             color:blue;
         }
 
@@ -85,7 +106,7 @@
             padding:5px;
         }
 
-
+        
 
     </style>
 
@@ -116,13 +137,15 @@
              <img class="img-fluid" src="<?php echo $image[0]; ?>" />
         </span>
            
-        <nav class="nav justify-content-end">
-
-            <a class="nav-link active" href="#">Students</a>
-            <a class="nav-link" href="#">Teachers</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </nav>
+        <?php wp_nav_menu( 
+            array( 
+                'theme_location' => 'header-menu',
+                'container' => 'nav',
+                'items_wrap' => '%3$s',
+                'container_class' => 'header-menu-navigation-container justify-content-end'
+                ) 
+            ); ?>
+        
 
         </div>
     </div>
@@ -134,7 +157,7 @@
                 'theme_location' => 'sub-menu',
                 'container' => 'nav',
                 'items_wrap' => '%3$s',
-                'container_class' => 'menu-navigation-container justify-content-center'
+                'container_class' => 'submenu-navigation-container justify-content-center'
                 ) 
             ); ?>
 
