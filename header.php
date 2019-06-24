@@ -37,8 +37,6 @@
         }
 
 
-
-
         .submenu-navigation-container {
             display:flex;
         }

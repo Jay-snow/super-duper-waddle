@@ -1,4 +1,21 @@
+  <style>
+    .articles {
+      box-shadow: 5px 5px 5px grey;
+    }
+  </style>
+  
   <?php get_header(); ?>
+
+
+  <div class="col-8 border-top border-primary mt-2 articles">
+  <h1> Top articles </h1>
+  <?php
+    if ( have_posts() ) : while ( have_posts() ) : the_post();
+        get_template_part( 'content', get_post_format() );
+	endwhile; endif;
+  ?>
+  </div>
+
 
   
   <?php get_footer(); ?>
