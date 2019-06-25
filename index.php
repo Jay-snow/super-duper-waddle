@@ -1,6 +1,6 @@
   <style>
     .articles {
-      box-shadow: 5px 5px 5px grey;
+      box-shadow: 2px 2px 4px grey, -2px 3px 4px grey;
 
       border-top: 3px solid #007bff;
 
@@ -12,7 +12,7 @@
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-8  mt-2 articles ml-4">
+      <div class="col-7  mt-2 articles ml-4">
         <h2> Top articles </h2>
         <?php
           if ( have_posts() ) : while ( have_posts() ) : the_post();
