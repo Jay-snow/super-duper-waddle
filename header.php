@@ -59,11 +59,11 @@
             cursor:pointer;
             color:blue;
         }
-
-        a {
+        /** Sub menu font color **/
+        .submenu-navigation-container>li>a {
             color:inherit;
         }
-        a:hover {
+        .submenu-navigation-container>li>a:hover {
             text-decoration: none;
         }
 
@@ -165,8 +165,8 @@
     <div class="row">
         <div class="col hero">
             <div class="hero-float">
-                <h2> Start your education now! </h2>
-                <a href=> Learn More </a>
+                <h2> MORE THAN AN EDUCATION </h2>
+                <a href=> Learn how to maximize your life! </a>
 
             </div>
             

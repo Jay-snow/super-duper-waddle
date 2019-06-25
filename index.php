@@ -1,19 +1,33 @@
   <style>
     .articles {
       box-shadow: 5px 5px 5px grey;
+
+      border-top: 3px solid #007bff;
+
     }
   </style>
   
   <?php get_header(); ?>
 
+  <div class="container-fluid">
+    <div class="row">
 
-  <div class="col-8 border-top border-primary mt-2 articles">
-  <h1> Top articles </h1>
-  <?php
-    if ( have_posts() ) : while ( have_posts() ) : the_post();
-        get_template_part( 'content', get_post_format() );
-	endwhile; endif;
-  ?>
+      <div class="col-8  mt-2 articles ml-4">
+        <h2> Top articles </h2>
+        <?php
+          if ( have_posts() ) : while ( have_posts() ) : the_post();
+              get_template_part( 'content', get_post_format() );
+        endwhile; endif;
+        ?>
+      </div>
+
+      <div class="col-2">
+        <h2> Upcoming Events </h2>
+      </div>
+
+
+
+    </div>
   </div>
 
 
@@ -22,7 +36,7 @@
 
 <?php get_pages(); ?>
 
-    <h1>Hello, world!</h1>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
