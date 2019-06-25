@@ -1,19 +1,25 @@
   <style>
     .articles {
-      box-shadow: 2px 2px 4px grey, -2px 3px 4px grey;
+      box-shadow: 2px 2px 4px #dedede, -2px 3px 4px #dedede;
 
-      border-top: 3px solid #007bff;
+      border-top: 5px solid #007bff;
 
     }
   </style>
   
   <?php get_header(); ?>
 
-  <div class="container-fluid">
+  <div class="container-fluid mx-auto">
     <div class="row">
 
-      <div class="col-7  mt-2 articles ml-4">
-        <h2> Top articles </h2>
+    <div class="col-2">
+    </div>
+
+      <div class="col-6  mt-2 articles ml-4">
+        <div class="mt-2" style="display:flex;justify-content:space-between">
+          <h3 class="mb-4 " > Top Articles </h3>
+          <h5> MORE ARTICLES </h5>
+       </div>
         <?php
           if ( have_posts() ) : while ( have_posts() ) : the_post();
               get_template_part( 'content', get_post_format() );

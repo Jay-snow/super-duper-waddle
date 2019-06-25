@@ -157,7 +157,7 @@
     <div class="row border-bottom no-gutters">
         <div class="col ">
         <div class="row">
-            <div class="col hero" style="height:900px;">
+            <div class="col hero" style="height:1024px;">
                 <div class="hero-float">
                     <h2> MORE THAN AN EDUCATION </h2>
                     <a href=> Learn how to maximize your life! </a>

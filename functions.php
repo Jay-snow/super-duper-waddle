@@ -18,7 +18,8 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'header-menu' => __( 'Header Menu' ),
-      'sub-menu' => __( 'Secondary Menu' )
+      'sub-menu' => __( 'Secondary Menu' ),
+      'footer' => __( 'Footer menu' )
      )
    );
  }
