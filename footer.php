@@ -54,7 +54,7 @@
             ); ?>
         </div>
         <div class="text-center">
-        <small class="text-white"> This theme was created by Marcus Snow. </small>
+        <small class="text-white"> This theme was created by <a class="text-white" href="https://www.marcussnow.dev/" target="_blank"> Marcus Snow.</a> </small>
         </div>
 
 
