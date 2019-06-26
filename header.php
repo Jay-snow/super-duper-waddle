@@ -151,7 +151,6 @@
         .hero-buttons-mobile {
             list-style:none;
             width:100%;
-
             justify-content:column;
             padding:0px 6em;
             color:white;
@@ -161,20 +160,21 @@
         .hero-buttons-mobile>li {
             margin-top:30px;
             margin-bottom:30px;
-            background-color: rgb(0,57,166);
-            text-align:center;
-            margin-right:0.5em;
+
+
             padding:0.5em;
         }
 
         .hero-buttons-mobile>li>a {
             color:inherit;
             text-decoration: none;
-            padding: 0.5em 3.2em;
-            margin-right:0.5em;     
+            background-color: rgb(0,57,166);
+            padding: 13.2px 95.2px;
             font-size:1.2em;
             text-transform:uppercase;
             font-weight:500;
+            display:block;
+            
         }
 
         .hero-buttons-mobile>li:hover {
@@ -233,7 +233,7 @@
 <div class="container-fluid">
     <div class="row border-bottom no-gutters">
         <div class="col ">
-        <div class="row">
+ 
         <?php if ( is_front_page()) :?>
             <div id="hero" class=" hero">
                     <div class="hero-float">
@@ -251,11 +251,10 @@
                 'menu_class' => 'container-fluid d-none d-lg-flex hero-buttons'
                 ) 
             ); ?>
-            
-          
                     </div>
                     
                 </div>
+                
                 <?php wp_nav_menu( 
             array( 
                 'theme_location' => 'hero-buttons',
