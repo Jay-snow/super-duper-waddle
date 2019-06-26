@@ -27,24 +27,22 @@
         <!-- if there is a thumbnail on post, use it. If not, use website logo -->
 
         <?php if ( get_the_post_thumbnail() ): ?> 
-        <div class="article-thumbnail-container">
-        <a href="<?php the_permalink(); ?> "> <?php echo get_the_post_thumbnail('','article-thumbnail', array( 'class' => 'w-100 img-fluid')); ?> </a>
-        </div>
+            <div class="article-thumbnail-container">
+            <a href="<?php the_permalink(); ?> "> <?php echo get_the_post_thumbnail('','article-thumbnail', array( 'class' => 'w-100 img-fluid')); ?> </a>
+            </div>
         <?php else: ?> 
-
-    <?php
-     $custom_logo_id = get_theme_mod( 'custom_logo' );
-     $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-        ?>
-    <div class="article-thumbnail-container">
-    <img class="w-100 img-fluid " style="background-color:black;" src="<?php echo $image[0]; ?>" />
-    </div>
-        <?php endif ?>
-
+            <?php
+            $custom_logo_id = get_theme_mod( 'custom_logo' );
+            $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                ?>
+          <div class="article-thumbnail-container">
+          <img class="w-100 img-fluid " style="background-color:black;" src="<?php echo $image[0]; ?>" />
+          </div>
+        <?php endif ?>   
+        </figure>
 
         
-       
-</figure>
+
     </div>
     <div class="col-9">
         

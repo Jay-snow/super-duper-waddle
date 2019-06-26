@@ -121,7 +121,7 @@
         ?>
         
         <span class="logo nav-primary d-none d-lg-block" >
-             <img class="img-fluid" src="<?php echo $image[0]; ?>" />
+             <a href="<?php echo get_home_url(); ?>"><img class="img-fluid" src="<?php echo $image[0]; ?>" /> </a>
         </span>
         <span class="logo2 nav-primary d-lg-none " >
              <img class="img-fluid" src="<?php echo $image[0]; ?>" />
