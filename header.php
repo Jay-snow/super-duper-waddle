@@ -157,13 +157,17 @@
     <div class="row border-bottom no-gutters">
         <div class="col ">
         <div class="row">
+        <?php if ( is_front_page()) :?>
             <div class="col hero" style="height:1024px;">
-                <div class="hero-float">
-                    <h2> MORE THAN AN EDUCATION </h2>
-                    <a href=> Learn how to maximize your life! </a>
+                    <div class="hero-float">
+                        <h2> MORE THAN AN EDUCATION </h2>
+                        <a href=> Learn how to maximize your life! </a>
 
+                    </div>
+                    
                 </div>
-                
-            </div>
+
+        <?php endif?>
+           
         </div>
 </div> <!-- End of  container-fluid -->

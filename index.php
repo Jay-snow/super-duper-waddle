@@ -25,6 +25,8 @@
               get_template_part( 'content', get_post_format() );
         endwhile; endif;
         ?>
+
+        
       </div>
 
       <div class="col-2">
