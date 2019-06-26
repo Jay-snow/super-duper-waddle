@@ -12,13 +12,13 @@
   <div class="container-fluid mx-auto">
     <div class="row">
 
-    <div class="col-2">
+    <div class="col-md-2">
     </div>
 
-      <div class="col-6  mt-2 articles ml-4">
+      <div class="col-12 col-md-6  mt-md-2 articles ml-md-4">
         <div class="mt-2" style="display:flex;justify-content:space-between">
-          <h3 class="mb-4 " > Top Articles </h3>
-          <h5> MORE ARTICLES </h5>
+          <h3 class="mb-4 font-weight-bold" > Top Articles </h3>
+          <h5> <a href="">MORE</a> </h5>
        </div>
         <?php
           if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -29,7 +29,7 @@
         
       </div>
 
-      <div class="col-2">
+      <div class="col-12 col-md-2">
         <h2> Upcoming Events </h2>
       </div>
 

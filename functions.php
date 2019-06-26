@@ -19,7 +19,8 @@ function register_my_menus() {
     array(
       'header-menu' => __( 'Header Menu' ),
       'sub-menu' => __( 'Secondary Menu' ),
-      'footer' => __( 'Footer menu' )
+      'footer' => __( 'Footer menu' ),
+      'hero-buttons' => __( 'Hero Buttons')
      )
    );
  }

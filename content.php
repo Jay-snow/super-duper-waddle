@@ -20,7 +20,7 @@
 </style>
 <div class="container">
 <div class="row mb-4">
-    <div class="col-3">
+    <div class="col-12 col-md-3">
         <!-- Blog post title -->
         
         <figure class="image is-square">
@@ -44,7 +44,7 @@
         
 
     </div>
-    <div class="col-9">
+    <div class="col-12 col-md-9">
         
         <h2 class="title "> <a href="<?php the_permalink(); ?> "> <?php the_title(); ?> </a> </h2>
         <p class="pubDate">PUBLISHED <?php the_date(); ?> IN <?php the_category(' '); ?> </p>
