@@ -70,7 +70,7 @@
 
 
         .hero {
-            background-image:url( <?php echo get_bloginfo('template_directory'); ?>/hero2.jpg);
+            background-image:url( <?php header_image(); ?> );
             height:100vh;
             width:100%;
             display:flex;
@@ -182,12 +182,14 @@
            
         }
 
-        
+  
 
     </style>
 
+<?php wp_head() ?>
   </head>
-  <body>
+  <body <?php body_class(); ?>>
+    
 <!-- BEGINNEING OF HEADER TEMPLATE -->
 
 

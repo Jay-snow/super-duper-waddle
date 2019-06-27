@@ -1,3 +1,5 @@
+
+  <?php get_header(); ?>
   <style>
     .articles {
       box-shadow: 2px 2px 4px #dedede, -2px 3px 4px #dedede;
@@ -7,15 +9,13 @@
     }
   </style>
   
-  <?php get_header(); ?>
-
   <div class="container-fluid mx-auto">
     <div class="row">
 
     <div class="col-md-2">
     </div>
 
-      <div class="col-12 col-md-6  mt-md-2 articles ml-md-4">
+      <div  class="col-12 col-md-6  mt-md-2 articles ml-md-4">
         <div class="mt-2" style="display:flex;justify-content:space-between">
           <h3 class="mb-4 font-weight-bold" > Top Articles </h3>
           <h5> <a href="">MORE</a> </h5>
@@ -29,8 +29,16 @@
         
       </div>
 
-      <div class="col-12 col-md-2">
-        <h2> Upcoming Events </h2>
+      <div class="col-12 col-md-2 articles mt-md-2 text-center  ml-md-4">
+
+        <div id="sidebar-primary" class="sidebar ">
+    <?php if ( is_active_sidebar( 'primary' ) ) : ?>
+        <?php dynamic_sidebar( 'primary' ); ?>
+    <?php else : ?>
+        <!-- Time to add some widgets! -->
+        
+    <?php endif; ?>
+</div>
       </div>
 
 
