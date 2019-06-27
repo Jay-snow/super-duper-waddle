@@ -149,37 +149,37 @@
         }
 
         .hero-buttons-mobile {
-            list-style:none;
-            width:100%;
-            justify-content:column;
-            padding:0px 6em;
-            color:white;
 
+
+            color:white;
         }
 
         .hero-buttons-mobile>li {
-            margin-top:30px;
-            margin-bottom:30px;
-
-
-            padding:0.5em;
+            margin-top:10px;
+            margin-bottom:10px;
+            margin-left:20px;
+            margin-right:20px;
+            padding:1.25em;
+            background-color: rgb(0,57,166);
+            list-style:none;
         }
 
         .hero-buttons-mobile>li>a {
             color:inherit;
             text-decoration: none;
-            background-color: rgb(0,57,166);
-            padding: 13.2px 95.2px;
-            font-size:1.2em;
+            padding: 13.2px 100.2px;
+
+            font-size:1.4em;
             text-transform:uppercase;
             font-weight:500;
-            display:block;
-            
+
         }
 
         .hero-buttons-mobile>li:hover {
             background-color:white;
             color:rgb(0,57,166);
+            border:1px solid rgb(0,57,166);
+           
         }
 
         
@@ -230,8 +230,8 @@
             ); ?>
 
     
-<div class="container-fluid">
-    <div class="row border-bottom no-gutters">
+<div class="container-fluid p-0">
+    <div class="row border-bottom">
         <div class="col ">
  
         <?php if ( is_front_page()) :?>
@@ -242,7 +242,7 @@
 
                     </div>
 
-                    <div class="bluebutts ">
+                    <div class="bluebutts d-none d-lg-block ">
                     <?php wp_nav_menu( 
             array( 
                 'theme_location' => 'hero-buttons',
@@ -259,8 +259,9 @@
             array( 
                 'theme_location' => 'hero-buttons',
                 'container' => 'nav',
-                'items_wrap' => '<div class="%2$s"> %3$s</span>',
-                'menu_class' => 'container-fluid d-lg-none hero-buttons-mobile'
+                'items_wrap' => ' %3$s',
+                'container_class' => 'd-lg-none hero-buttons-mobile'
+
                 ) 
             ); ?>
         <?php endif?>

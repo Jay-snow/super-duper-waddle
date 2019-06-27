@@ -1,10 +1,5 @@
 <?php
 
-
- 
-
-       
-
 function setup_my_theme() {
 
 add_theme_support('custom-logo', array(
