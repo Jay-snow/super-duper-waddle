@@ -9,7 +9,7 @@
     }
   </style>
   
-  <div class="container-fluid mx-auto">
+  <div class="container-fluid mx-auto " style="margin-top:5rem;margin-bottom:5rem;">
     <div class="row">
 
     <div class="col-md-2">

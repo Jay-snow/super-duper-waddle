@@ -36,7 +36,7 @@
 ?>
 
 
-<div class="container-fluid nav-primary mt-3">
+<footer class="container-fluid nav-primary mt-3">
    <div class="row"> 
        <div class="col">
 
@@ -60,4 +60,5 @@
 
        </div>
    </div>
-</div>
+   <?php wp_footer(); ?>
+</footer>

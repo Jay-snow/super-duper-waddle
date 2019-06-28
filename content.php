@@ -52,7 +52,7 @@
             <!-- Blog post excerpt -->
              <div> <?php the_excerpt(); ?> </div>
 
-            <a style="text-transform:uppercase;"href="<?php the_permalink(); ?> "> read more > </a>
+            <a style="text-transform:uppercase;"href="<?php the_permalink(); ?> "> read more ❯ </a>
 
     </div>
 </div>

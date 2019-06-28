@@ -29,8 +29,14 @@
             list-style:none;
             display:block;
             margin-right:0.5em;
-            color:black;
-            font-size:1.15rem;            
+            font-size:1.15rem;
+            border-left: 1px solid grey;
+            padding:10px;          
+        }
+        .header-menu-navigation-container>.container-fluid>li>a {
+
+            color:lightgrey;
+       
         }
 
 
@@ -50,8 +56,10 @@
             color:white;
             margin-top: -.5rem; /* Negative margins so hover effect displays across the navbar  correctly */
             margin-bottom:-.5rem;
-            padding:.25rem .5rem;
-            font-size:1.15rem;            
+            margin-right:0.75rem;
+            padding:.55rem .95rem;
+            font-size:1.05rem; 
+                       
         }
 
         /** Hover effects for submenu **/
@@ -59,13 +67,17 @@
             background-color:white;
             cursor:pointer;
             color:blue;
+            -webkit-transition: background-color 0.25s;
+            transition: background-color 0.25s;
+            
         }
         /** Sub menu font color **/
         .submenu-navigation-container>.container-fluid>li>a {
             color:inherit;
         }
-        .submenu-navigation-container>li>a:hover {
+        .submenu-navigation-container>.container-fluid>li>a:hover {
             text-decoration: none;
+            color: rgb(0, 57, 166);
         }
 
 
@@ -99,6 +111,7 @@
 
         .logo {
             position:fixed;
+            margin-top:-35px;
             margin-left:80px;
             width:135px;
             height:127px;
@@ -142,7 +155,7 @@
             background-color: rgb(0,57,166);
             padding: 0.5em 3.0em;
             margin-right:0.5em;
-            
+            border:1px solid white;
             font-size:1.2em;
             text-transform:uppercase;
             font-weight:500;
@@ -210,9 +223,9 @@
             array( 
                 'theme_location' => 'header-menu',
                 'container' => 'nav',
-                'items_wrap' => '<div class="%2$s"> %3$s</span>',
-                'menu_class' => 'container-fluid justify-content-end',
-                'container_class' => 'navbar  fixed-top header-menu-navigation-container '
+                'items_wrap' => '<div class="%2$s "> %3$s</span>',
+                'menu_class' => 'container-fluid p-0 justify-content-end',
+                'container_class' => 'navbar pt-0 pr-0 header-menu  fixed-top header-menu-navigation-container '
                 ) 
             ); ?>
         
@@ -233,11 +246,11 @@
 
     
 <div class="container-fluid p-0">
-    <div class="row border-bottom">
+    <div class="row ">
         <div class="col ">
  
         <?php if ( is_front_page()) :?>
-            <div id="hero" class=" hero">
+            <div id="hero" class=" hero border-bottom">
                     <div class="hero-float">
                         <h2> MORE THAN AN EDUCATION </h2>
                         <a href=> Learn how to maximize your life! </a>
